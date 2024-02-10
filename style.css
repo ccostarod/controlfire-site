@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+ */
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cabecalho {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 3px solid #E86E21;
+}
+
+.logo {
+    height: 80px;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: #E86E21;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.link:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.control-fire{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
+    font-size: 128px;
+    margin: auto;
+}
+
+.slogan{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.menu {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.palavras {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 50px;
+}
+.subPalavras1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.frase1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.cor-destaque {
+    color: #E86E21;
+}
+
+.quem-somos {
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+}
+
+.frase-quem-somos {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.menu-quem-somos {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.equipe {
+    height: 300px;
+    border-radius: 40px;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.menu-quem-somos {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px; /* Ajuste conforme necessário */
+    align-items: center;
+    gap: 50px;
+}
+
+.menu-quem-somos > * {
+    flex: 1;
+    max-width: 50%; /* Cada elemento ocupará metade do espaço */
+    padding: 0 20px; /* Adicionando espaçamento interno para separação */
+    box-sizing: border-box; /* Garantindo que o padding não aumente a largura do elemento */
+    
+}
