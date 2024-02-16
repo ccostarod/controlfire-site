@@ -200,7 +200,34 @@ a{
     text-decoration: none;
     border-radius: 8px;
 }
+.clientes-area {
+    display: flex;
+    flex-direction: column;
+}
 
+.clientes {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.clientes h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.organizacao-clientes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.organizacao-clientes img{
+    height: 40px;
+    align-items: center;
+}
 
 .quem-somos {
     display: flex;
