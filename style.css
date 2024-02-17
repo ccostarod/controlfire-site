@@ -11,14 +11,19 @@ font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
  }
-
- html{
+ body{
+    overflow-y: scroll;
     scroll-behavior: smooth;
  }
 
-
-
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
 
 .cabecalho {
     
@@ -27,6 +32,7 @@ font-family: 'Poppins', sans-serif;
     justify-content: space-around;
     padding: 10px;
     border-bottom: 3px solid #E86E21;
+    
 }
 
 .logo {
@@ -235,6 +241,8 @@ a{
     background-color: #D9D9D9;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+    min-height: 400px;
 }
 
 .frase-quem-somos {
@@ -253,6 +261,8 @@ a{
     height: 300px;
 
 }
+
+
 
 p{
     font-family: 'Open Sans', sans-serif;
@@ -274,5 +284,258 @@ p{
     max-width: 50%; /* Cada elemento ocupará metade do espaço */
     padding: 0 20px; /* Adicionando espaçamento interno para separação */
     box-sizing: border-box; /* Garantindo que o padding não aumente a largura do elemento */
-    
 }
+
+
+.contacts {
+    background-color: #D9D9D9;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    min-height: 80vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contacts .content h2 {
+    font-size: 36px;
+    font-weight:500;
+}
+
+.contacts .content p {
+    text-align: center;
+    font-weight: 300;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: #E86E21;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;  
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #E86E21;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input, textarea, button {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox button {
+    position: relative; /* Tornar o botão relativo para posicionar elementos filhos absolutos */
+    display: flex; /* Usar flexbox para centralizar a imagem */
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    border-radius: 30px;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+
+.loading {
+    position: absolute;
+    
+    width: 30px;
+    height: 30px; /* Adicionei altura para garantir uma exibição adequada */
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox button:focus ~ span,
+.contactForm .inputBox button:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span  {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox button[type="submit"]{
+    width: 100px;
+    background-color: #E86E21;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contacts {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo, .contactForm {
+        width: 100%;
+    } 
+
+}
+
+.whatsapp-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: black;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+ }
+ .joinchat__tooltip {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 7px;
+    right: 60px;
+    width: auto;
+    height: 35px;
+    padding: 5px 10px 5px 5px;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-out 0.4s;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4s));
+ }
+ .joinchat__tooltip::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -6px;
+    border: 8px solid transparent;
+    border-width: 6px 0 6px 8px;
+    border-left-color: #fff;
+ }
+ .bi-person-circle::before {
+    margin-right: 5px;
+    color: #999;
+ }
+ .joinchat__tooltip .text {
+    color: #525252;
+    font-size: 16px;
+ }
+
+ .whatsapp-btn:hover {
+    transition: all 0.5s ease-in-out;
+    animation: bounce 1.6s infinite;
+ }
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+       transform: translateY(0);
+    }
+    40% {
+       transform: translateY(-5px);
+    }
+    60% {
+       transform: translateY(-5px);
+    }
+ }
+ @media (hover: hover) {
+    .whatsapp-btn:hover .joinchat__tooltip {
+       opacity: 1;
+       animation: none;
+       transition: opacity 0.2s;
+    }
+ } 
