@@ -146,7 +146,7 @@ a{
 @media screen and (max-width: 785px) {
     .home {
         display: block;
-        padding: 100px 2%;
+        padding: 50px 2%;
         flex-direction: column;
         text-align: center;
         overflow: hidden;
@@ -174,11 +174,10 @@ a{
     }
 }
 
-@media screen and (max-width: 360px){
-    .home {
-        padding: 0;
+@media screen and (max-width: 398px){
+    .home img {
+        height: 150px;
     }
-     
 }
 /* Fim media navbar */
 
