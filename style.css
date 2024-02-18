@@ -178,6 +178,15 @@ a{
     .home img {
         height: 150px;
     }
+    .home {
+        margin-bottom: 2rem;
+    }
+    .home .text-h1 {
+        line-height: 4rem;
+    }
+    .conjuto-home-text {
+        line-height: 1rem;
+    }
 }
 /* Fim media navbar */
 
