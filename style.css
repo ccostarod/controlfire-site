@@ -169,7 +169,7 @@ a{
 
     .home img {
         margin-top: 2rem;
-        height: 200px;
+        height: 150px;
         width: 100%;
     }
 }
@@ -678,9 +678,11 @@ p{
 /* media contatos */
 @media (max-width: 991px) {
     .contacts {
+        
         padding: 50px;
     }
     .container {
+        
         flex-direction: column;
     }
     .container .contactInfo {
@@ -690,7 +692,8 @@ p{
         width: 100%;
     } 
     .box {
-        width: 100% ;
+        width: 100%;
+        display: block;
     }
     .box p{
         font-size: 14px;
