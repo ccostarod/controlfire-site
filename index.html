@@ -11,31 +11,44 @@
 </head>
 <body>
     <header>
-        <section class="cabecalho">
-            <img class="logo" src="img/logo.png" alt="Logo da marca">
-            <div class="links">
-                <nav>
-                    <a class="link" href=#servicosID>Serviços</a>
-                    <a class="link" href="#quem-somosID">Quem somos</a>
-                    <a class="link" href="#contatosID">Contatos</a>
-                </nav>
+        <nav class="nav-bar">
+            <div class="logo-nav">
+                <img src="img/logo.png" alt="logo">
             </div>
-        </section>
-    </header>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#servicosID" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#quem-somosID" class="nav-link">Quem somos</a></li>
+                    <li class="nav-item"><a href="#contatosID" class="nav-link">Contatos</a></li> 
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
 
+        <div class="mobile-menu">
+            <ul>
+                    <li class="nav-item"><a href="#servicosID" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#quem-somosID" class="nav-link">Quem somos</a></li>
+                    <li class="nav-item"><a href="#contatosID" class="nav-link">Contatos</a></li> 
+            </ul>
+        </div>
+    </header>
+    <script src="script.js"></script>
     <main>
-        <section class="menu">
-            <div class="palavras">
-                <div class="subPalavras1">
-                    <h1 class="control-fire">Control Fire</h1>
-                    <h2 class="slogan">Treinamentos, projetos e instalações</h2>
+        <section class="home">
+            <div class="home-text">
+                <div class="conjuto-home-text">
+                    <h1 class="text-h1">Control Fire</h1>
+                    <h2 class="text-h2">Treinamentos, projetos e instalações</h2>
                 </div>
-                
-                    <h2 class="frase1"> Empresa especialista em segurança contra <br><span class="cor-destaque">incêndios</span>
-                    em todo Maranhão.</h2>
-                
+                <h3 class="text-h3">Empresa especialista em segurança contra<br><span class="cor-destaque">incêndios</span>
+                    em todo Maranhão.</h3>
             </div>
-            <img class="extintor-foto" src="img/extintor1.png" alt="Imagem extintor">
+            <div class="home-img">
+                <img src="img/extintor.svg" alt="">
+            </div>
         </section>
 
 
@@ -103,7 +116,7 @@
 
 
 
-        <div class="background-color">
+        
         <section class="quem-somos" id="quem-somosID">
             <h1>Quem somos</h1>
             <p>Conheça um pouco mais do Grupo Control Fire, empresa número 1 do Maranhão em prevenção contra incêndios</p>
@@ -131,7 +144,7 @@
                 </section>
             </div>
         </section>
-        </div>
+
 
        <section class="contacts" id="contatosID">
             <div class="content">
@@ -204,7 +217,62 @@
             </div>
     </div></a>  
     <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Control Fire</h1>
+                <p>Especialista em segurança contra incêndios</p>
 
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Conteúdo</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Quem somos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contatos</a>
+                </li>
+            </ul>
+            <ul class="footer-list">
+                <li>
+                    <h3>Desenvolvimento</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Projeto</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Github</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">FAQ</a>
+                </li>
+            </ul>
+            <img src="img/logo.png" alt="logo-footer">
+            
+        </div>
+        <div id="footer_copyright">
+            &#169
+            2024 all rights reserved
+        </div>
     </footer>
 
     <script>
