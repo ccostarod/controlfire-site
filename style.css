@@ -14,6 +14,7 @@ font-family: 'Poppins', sans-serif;
     
  }
  body{
+    background-color: #f2f2f2;
     overflow-y: scroll;
     scroll-behavior: smooth;
  }
@@ -86,6 +87,7 @@ a{
 }
 
 .menu {
+    min-height: 80vh;
     margin-top: 50px;
     display: flex;
     align-items: center;
@@ -200,12 +202,18 @@ a{
 }
 
 .card .read-more {
-    background: linear-gradient(90deg, #E86E21, #000);
-    padding: 12px;
+    background-color: #E86E21;
     color: #fff;
+    padding: 12px;
     text-decoration: none;
     border-radius: 8px;
+    transition: 0.3s ease;
 }
+
+.card .read-more:hover {
+    background-color: #f89558;
+}
+
 .clientes-area {
     display: flex;
     flex-direction: column;
@@ -234,34 +242,146 @@ a{
     height: 40px;
     align-items: center;
 }
-
+.background-color {
+    background-color: #f2f2f2;
+}
 .quem-somos {
+    
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    background-color: #D9D9D9;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    min-height: 400px;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
 }
 
-.frase-quem-somos {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 60px;
+.quem-somos h1 {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 15px;
+    position: relative;
 }
 
-.menu-quem-somos {
+
+.quem-somos p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.quem-somos .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.equipe {
-    height: 300px;
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
 
 }
 
+.about-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+#ch {
+    display: none;
+}
+
+#ch:checked ~ .extra-content {
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+.about-content label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E86E21;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.about-content label:hover {
+    background-color: #f89558;
+}
+
+.extra-content {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .quem-somos {
+        padding: 0px 20px;
+    }
+    .quem-somos h1 {
+        font-size: 36px;
+    }
+    .quem-somos p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .quem-somos .container {
+        padding: 0px;
+    }
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .read-more {
+        font-size: 16px;
+    }
+}
 
 
 p{
@@ -271,20 +391,7 @@ p{
     text-align: justify;
 }
 
-.menu-quem-somos {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px; /* Ajuste conforme necessário */
-    align-items: center;
-    gap: 50px;
-}
 
-.menu-quem-somos > * {
-    flex: 1;
-    max-width: 50%; /* Cada elemento ocupará metade do espaço */
-    padding: 0 20px; /* Adicionando espaçamento interno para separação */
-    box-sizing: border-box; /* Garantindo que o padding não aumente a largura do elemento */
-}
 
 
 .contacts {
@@ -338,6 +445,7 @@ p{
     height: 60px;
     display: flex;
     background-color: #E86E21;
+    color: #fff;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -437,11 +545,17 @@ p{
 .contactForm .inputBox button[type="submit"]{
     width: 100px;
     background-color: #E86E21;
+    color: #fff;
     border: none;
     cursor: pointer;
     height: 40px;
     padding: 10px;
     font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.contactForm .inputBox button[type="submit"]:hover {
+    background-color: #f89558;
 }
 
 @media (max-width: 991px) {
@@ -539,3 +653,57 @@ p{
        transition: opacity 0.2s;
     }
  } 
+
+ @media screen and (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .extintor-foto {
+        height: 200px;
+    }
+    .menu, .servicos, .clientes, .quem-somos, .contacts {
+        padding: 20px;
+    }
+    .servicos .servicos-frase {
+        font-size: 40px;
+    }
+    .servicos .cards-servicos {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .card {
+        width: 100%;
+    }
+    .card .content {
+        top: 200px;
+    }
+    .card:hover .content {
+        top: 100px;
+    }
+    .clientes h1 {
+        font-size: 24px;
+    }
+    .about-image {
+        margin-right: 0;
+    }
+    .contactForm {
+        width: 100%;
+        padding: 20px;
+    }
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+    .joinchat__tooltip {
+        top: -35px;
+        right: 0;
+    }
+    .bi-person-circle::before {
+        margin-right: 0;
+    }
+    .joinchat__tooltip .text {
+        font-size: 14px;
+    }
+}
+
