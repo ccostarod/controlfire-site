@@ -1,0 +1,199 @@
+.servicos {
+    display: flex;
+    background-color: #D9D9D9;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 105vh;
+}
+.servicos .servicos-frase {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.card {
+    display: flex;
+    
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0,0,0, 0.15);
+    transition: 0.5s;
+}
+
+.card:hover{
+    height: 400px;
+}
+
+.card .img-box {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5s;
+}
+
+.card .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+}
+
+.cards-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin-bottom: 5rem;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card .content p {
+    font-size: 16px;
+}
+
+.card:hover .content{
+    top: 130px;
+    height: 250px;
+}
+
+.card .read-more {
+    background-color: #E86E21;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.card .read-more:hover {
+    background-color: #f89558;
+}
+
+
+.portfolio-tecnico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.portfolio-tecnico h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.botao-portfolio {
+    background-color: #E86E21;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.botao-portfolio:hover {
+    opacity: 0%;
+}
+
+.clientes {
+    background-color: #D9D9D9;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.clientes h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.organizacao-clientes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.organizacao-clientes img{
+    height: 40px;
+    align-items: center;
+}
+
+/* Media screen servicos */
+
+@media (max-width: 1270px) {
+    .servicos .cards-servicos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        width: 100%; /* Definir largura total para ocupar a largura do contêiner pai */
+        max-width: 450px; /* Limitar a largura máxima dos cards */
+    }
+
+    .card .img-box img{
+        width: 100%; /* Definir largura total para a imagem */
+        position: absolute; /* Alterar a posição para relativa */
+        height: auto; /* Redefinir altura para automático */
+    }
+
+    .card .content {
+        position: relative; /* Alterar a posição para relativa */
+        top: 250px; /* Redefinir a posição superior */
+        padding: 20px; /* Adicionar algum espaçamento interno */
+         /* Redefinir a altura para automático */
+        text-align: center; /* Centralizar o texto */
+        
+        
+        width: 100%;
+        padding: 0px 30px;
+        height: 20px;
+        
+    }
+    .card .content h2 {
+        margin-top: 1rem;
+    }
+
+    .card:hover .content {
+        top: 120; /* Redefinir a posição superior */
+        position: relative;
+        height: 400px;
+    }
+
+    .clientes {
+        flex-direction: column; /* Empilhar os elementos verticalmente */
+        gap: 40px; /* Adicionar algum espaçamento entre os elementos */
+        text-align: center; /* Centralizar o texto */
+    }
+
+    .card .content p {
+        margin-bottom: 0; /* Remover a margem inferior do parágrafo */
+    }
+}
+/* Fim media screen servicos*/
