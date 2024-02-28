@@ -454,9 +454,9 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    justify-items: baseline;
-    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
 }
 .clientes-area img {
     height: 80px;
@@ -475,8 +475,88 @@ a{
     align-items: center;
     gap: 10px;
 }
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
 
+.card-slide {
+    width: 320px;
+    border-radius: 25px;
+    background-color: #fff;
+}
 
+.slide-content {
+    margin: 0 40px;
+}
+
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #E86E21;
+    border-radius: 25px 25px 25px 0px;
+}
+
+.overlay::before, .overlay::after{
+    content: '';
+    left: 0;
+    bottom: -40px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #E86E21;
+}
+.overlay::after{
+    border-radius: 25px 0 0 0;
+    background-color: #fff;
+}
+.card-image {
+    position: relative;
+    background-color: #fff;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    
+    border-radius: 50%;
+    border: 4px solid #E86E21;
+}
+
+.card-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.card-descricao {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
 
 .quem-somos {
     
